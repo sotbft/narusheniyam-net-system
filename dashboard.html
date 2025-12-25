@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нарушениям.Нет - Личный кабинет</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <div>
+                <h2>Личный кабинет</h2>
+                <p id="user-name">Загрузка...</p>
+            </div>
+            <div class="user-info">
+                <button class="logout-btn" onclick="logout()">Выйти</button>
+            </div>
+        </header>
+
+        <div class="content">
+            <h3 class="section-title">Мои заявления</h3>
+            
+            <button class="new-appeal-btn" onclick="window.location.href='appeal-form.html'">
+                📝 Создать новое заявление
+            </button>
+            
+            <div class="appeals-list" id="appeals-container">
+                <!-- заявления будут загружены здесь -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Система помощи полиции © 2025</p>
+        </div>
+    </div>
+</body>
+</html>

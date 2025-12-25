@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нарушениям.Нет - Новое заявление</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <div>
+                <h2>Новое заявление</h2>
+                <p id="user-name">Загрузка...</p>
+            </div>
+            <div class="user-info">
+                <button class="back-btn" onclick="goBack()">← Назад</button>
+                <button class="logout-btn" onclick="logout()">Выйти</button>
+            </div>
+        </header>
+
+        <div class="content">
+            <h3 class="section-title">Оформление заявления о нарушении ПДД</h3>
+            
+            <div class="input-group">
+                <label>Госномер автомобиля:</label>
+                <input type="text" id="car-number" placeholder="А123БВ777">
+                <div class="hint">Пример: А123БВ777 или О777ОО177</div>
+            </div>
+            
+            <div class="textarea-group">
+                <label>Описание нарушения:</label>
+                <textarea id="description" placeholder="Подробно опишите нарушение: место, время, обстоятельства..."></textarea>
+                <div class="hint">Укажите точный адрес, время нарушения и что именно произошло</div>
+            </div>
+            
+            <button class="btn" onclick="createAppeal()">Отправить заявление</button>
+        </div>
+
+        <div class="footer">
+            <p>Система помощи полиции © 2025</p>
+        </div>
+    </div>
+</body>
+</html>
