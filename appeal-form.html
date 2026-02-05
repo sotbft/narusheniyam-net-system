@@ -3,69 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нарушениям.Нет - Вход</title>
+    <title>Нарушениям.Нет - Новое заявление</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Нарушениям.Нет</h1>
-            <p>Портал сознательных граждан</p>
-        </div>
-
-        <div class="auth-box">
-            <div class="tabs">
-                <button class="tab active" id="login-tab-btn">Вход</button>
-                <button class="tab" id="register-tab-btn">Регистрация</button>
+        <header class="dashboard-header">
+            <div>
+                <h2>Новое заявление</h2>
+                <p id="user-name">Загрузка...</p>
             </div>
-
-            <!-- форма входа -->
-            <div id="login-form" class="form active">
-                <h2>Вход в систему</h2>
-                <div class="input-group">
-                    <label>Логин:</label>
-                    <input type="text" id="login-username" required>
-                </div>
-                <div class="input-group">
-                    <label>Пароль:</label>
-                    <input type="password" id="login-password" required>
-                </div>
-                <button onclick="login()" class="btn">Войти</button>
-                <p id="login-error" class="error"></p>
-                
-                <div class="admin-info">
-                    <p><strong>Доступ администратора:</strong></p>
-                    <p>Логин: <code>copp</code> | Пароль: <code>password</code></p>
-                </div>
+            <div class="user-info">
+                <button class="back-btn" onclick="goBack()">← Назад</button>
+                <button class="logout-btn" onclick="logout()">Выйти</button>
             </div>
+        </header>
 
-            <!-- форма регистрации -->
-            <div id="register-form" class="form">
-                <h2>Регистрация</h2>
-                <div class="input-group">
-                    <label>ФИО:</label>
-                    <input type="text" id="reg-fio" required>
-                </div>
-                <div class="input-group">
-                    <label>Телефон:</label>
-                    <input type="tel" id="reg-phone" required>
-                </div>
-                <div class="input-group">
-                    <label>Email:</label>
-                    <input type="email" id="reg-email" required>
-                </div>
-                <div class="input-group">
-                    <label>Логин:</label>
-                    <input type="text" id="reg-username" required>
-                </div>
-                <div class="input-group">
-                    <label>Пароль:</label>
-                    <input type="password" id="reg-password" required>
-                </div>
-                <button onclick="register()" class="btn">Зарегистрироваться</button>
-                <p id="register-message" class="message"></p>
+        <div class="content">
+            <h3 class="section-title">Оформление заявления о нарушении ПДД</h3>
+            
+            <div class="input-group">
+                <label>Госномер автомобиля:</label>
+                <input type="text" id="car-number" placeholder="А123БВ777">
+                <div class="hint">Пример: А123БВ777 или О777ОО177</div>
             </div>
+            
+            <div class="textarea-group">
+                <label>Описание нарушения:</label>
+                <textarea id="description" placeholder="Подробно опишите нарушение: место, время, обстоятельства..."></textarea>
+                <div class="hint">Укажите точный адрес, время нарушения и что именно произошло</div>
+            </div>
+            
+            <button class="btn" onclick="createAppeal()">Отправить заявление</button>
         </div>
 
         <div class="footer">
